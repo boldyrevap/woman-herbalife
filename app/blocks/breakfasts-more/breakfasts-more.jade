@@ -1,0 +1,61 @@
+mixin breakfasts-more()
+
+	+b('section').breakfasts-more.js-more
+		.container
+			+e.wrap
+				+e('ul').list
+					+e('li').item
+						+e.caption
+							img(src='./images/b-more-1.jpg')
+						+e('h4').title Сбалансированный завтрак от Herbalife Nutrition
+						+e('ul').options
+							+e('li').option
+								+e.img
+									img(src='./images/b-more-opt-1.png')
+								+e('p').name Растительный напиток на основе алоэ
+								+e('p').desc поддерживает естественную работу пищеварительной системы, стимулирует процесс пищеварения
+							+e('li').option
+								+e.img
+									img(src='./images/b-more-opt-2.png')
+								+e('p').name Протеиновый коктейль Формула 1
+								+e('p').desc полноценный прием пищи, можно смешивать с молоком или водой, около 20 гр натурального белка, более 20 витаминов и минералов
+							+e('li').option
+								+e.img
+									img(src='./images/b-more-opt-3.png')
+								+e('p').name Травяной напиток
+								+e('p').desc тонизирует и усиливает антиоксидантную защиту организма
+					+e('li').item
+						+e.caption
+							img(src='./images/b-more-2.jpg')
+						+e('h4').title Углеводно-белковый
+						+e('ul').options
+							+e('li').option
+								+e.img
+									img(src='./images/b-more-opt-4.png')
+								+e('p').desc Нежирный творог с горстью ягод
+							+e('li').option
+								+e.img
+									img(src='./images/b-more-opt-5.png')
+								+e('p').desc Кусочек ржаного хлеба с сыром
+							+e('li').option
+								+e.img
+									img(src='./images/b-more-opt-6.png')
+								+e('p').desc Травяной или зеленый чай
+					+e('li').item
+						+e.caption
+							img(src='./images/b-more-3.jpg')
+						+e('h4').title Белково-углеводный
+						+e('ul').options
+							+e('li').option._50
+								+e.img
+									img(src='./images/b-more-opt-7.png')
+								+e('p').desc Омлет со свежими овощами и кусочком цельнозернового хлеба
+							+e('li').option._50
+								+e.img
+									img(src='./images/b-more-opt-8.png')
+								+e('p').desc Травяной или зеленый чай
+				+e.links
+					+e(href='#' data-target='breakfasts').link.js-hide-more
+						p свернуть
+						img(src='./images/arrow-black.png')
+

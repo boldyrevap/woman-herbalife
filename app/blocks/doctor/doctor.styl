@@ -1,0 +1,59 @@
+.doctor
+
+	&__bg
+		padding 40px
+		margin 0 -25px
+		background-color $c-green-bg
+		+above(769px)
+			margin 0 -70px
+		+below(420px)
+			margin 0
+
+	&__wrap
+		border 1px solid $c-white
+		padding 10px 50px 30px
+
+	&__job
+		font-family $ff-gothamregular
+		font-size 29px
+		color $c-white
+		+below(420px)
+			font-size 16px
+
+	&__name
+		font-family $ff-gothamblack
+		font-size 29px
+		color $c-white
+		+below(420px)
+			font-size 16px
+
+	&__top-image
+		width 113px
+		flex-basis 113px
+		flex-shrink 0
+		margin-right 15px
+		+below(420px)
+			flex-basis 50px
+
+		img
+			width 100%
+
+	&__top
+		display flex
+		flex-flow row nowrap
+		justify-content center
+		align-items center
+		margin-bottom 20px
+
+	&__text
+		font-family $ff-gothamregular
+		font-size 18px
+		line-height 24px
+		color $c-white
+		text-align left
+		+above(769px)
+			text-align justify
+			text-align-last center
+		+below(420px)
+			font-size 14px
+			line-height 20px

@@ -1,0 +1,13 @@
+mixin breakfasts()
+
+	+b('section').breakfasts
+		.container.shadowless
+			+e.wrap
+				+e.content
+					+e.content-wrap
+						+e('h2').title Вкусные, полезные и&nbsp;быстрые:
+						+e('p').caption ТОП-3 идеальных белковых завтрака
+						+e.links
+							+e(href='#' data-target='breakfasts').link.js-show-more
+								p читать
+								img(src='./images/arrow-white.png')

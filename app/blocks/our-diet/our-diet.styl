@@ -1,0 +1,42 @@
+.our-diet
+
+	&__wrap
+		padding 0 15px
+
+	&__title
+		margin-bottom 25px
+
+	&__text
+		margin-bottom 40px
+
+	&__image
+		text-align center
+
+		img
+			max-width 100%
+
+	&__bottom
+		position relative
+		padding 370px 0 40px
+		margin -320px 0 0
+		background url('../../images/our-diet-bg-m.png') no-repeat 50% 90%
+		background-size cover
+		+above(769px)
+			margin -300px 0 0
+			padding 340px 0 40px
+			background url('../../images/our-diet-bg.png') no-repeat 50% 0%
+			background-size auto
+
+	&__icons
+		display flex
+		flex-flow row nowrap
+		justify-content center
+		align-items center
+		margin-bottom 25px
+
+	&__icon
+		margin 0 30px
+		+below(560px)
+			margin 0 10px
+		img
+			max-width 100%

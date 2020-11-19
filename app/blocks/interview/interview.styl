@@ -1,0 +1,144 @@
+.interview
+	background-color $c-white
+
+	&__wrap
+		padding 60px 15px
+
+	&__title
+		font-family $ff-gothamblack
+		font-size 29px
+		color $c-green
+		text-align center
+		margin-bottom 5px
+		text-transform uppercase
+
+	&__subtitle
+		font-family $ff-gothamblack
+		font-size 21px
+		color $c-grey-light
+		text-align center
+
+	&__content
+		padding 40px 0
+		border 1px solid $c-green
+		margin-top 40px
+		position relative
+		&:before
+			content ''
+			position absolute
+			top -5px
+			left 50%
+			transform translateX(-50%)
+			width 85px
+			height 10px
+			background-color $c-green
+			border-radius 10px
+
+	&__value
+		font-family $ff-gothamregular
+		font-size 16px
+		color $c-black
+		margin-bottom 5px
+		text-align center
+		display flex
+		flex-flow row nowrap
+		justify-content center
+		align-items center
+
+		img
+			margin-right 10px
+			+above(769px)
+				height 65px
+				flex-shrink 0
+
+		strong
+			font-weight bold
+
+		+above(769px)
+			width 42%
+			text-align left
+			justify-content space-between
+			margin-bottom 0
+			align-items stretch
+			span
+				display flex
+				flex-flow row nowrap
+				justify-content flex-start
+				align-items center
+				padding 0 10px
+				width 100%
+				&.white
+					background-color $c-orange
+					color $c-white
+		+below(420px)
+			font-size 12px
+
+	&__item
+		margin-bottom 25px
+		&:last-child
+			margin-bottom 0
+		+above(769px)
+			display flex
+			flex-flow row nowrap
+			justify-content space-between
+			align-items stretch
+			padding 0 0 0 30px
+			margin-bottom 0
+
+	&__graph
+		+above(769px)
+			width 58%
+
+	&__info
+		margin-top 30px
+
+	&__tip
+		position absolute
+		bottom 20%
+		right -15px
+		width 200px
+		height 200px
+		border 4px solid $c-orange
+		border-radius 50%
+		display flex
+		flex-flow column
+		justify-content center
+		align-items center
+		background-color $c-white
+		+above(769px)
+			right 12%
+		+below(420px)
+			width 120px
+			height 120px
+			bottom -3%
+			right 0
+
+		&-content
+			text-align center
+			font-family $ff-gothambold
+			color $c-orange
+			padding 0 10px
+			width 100%
+
+		&-big
+			font-size 52px
+			+below(420px)
+				font-size 30px
+
+
+		&-percent
+			font-size 28px
+			+below(420px)
+				font-size 16px
+
+		&-text
+			display inline-block
+			font-size 14px
+			+below(420px)
+				font-size 9px
+
+	&__image
+		flex-basis 110px
+		flex-shrink 0
+		text-align center
+		font-size 0

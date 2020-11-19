@@ -1,0 +1,19 @@
+mixin graph(data)
+
+	- data = data || {}
+	- var n = 50
+
+	+b(class=data.mod ? 'graph_' + data.mod : 'graph' data-fill=data.fill)
+		+e.wrap
+			+e.value
+				span= data.value
+				span %
+			+e.items
+				- for (var i = 0; i < n; i++) {
+					+e.item
+
+					//- if i < data.fill
+					//- 	+e.item._fill
+					//- else
+					//- 	+e.item
+				- }

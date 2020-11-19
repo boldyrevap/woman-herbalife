@@ -1,0 +1,37 @@
+mixin header()
+
+	+b('header').header
+		+e.wrap
+			+e.top
+				+e.placeholder
+				+e.logo
+					+e(href='http://woman.ru' target='_blank').logo-link
+						+e.logo-image(src='./images/woman.svg')
+						+e.logo-image._m(src='./images/woman-m.svg')
+				+e.forum
+					+e(href='#').forum-link
+						span Форум
+				+e.burger
+					+e(href='http://woman.ru').burger-link
+			+e('nav').nav
+				+e('ul').list
+					+e('li').item
+						+e(href='http://www.woman.ru/stars/').link Звезды
+					+e('li').item
+						+e(href='http://www.woman.ru/fashion/').link Мода
+					+e('li').item
+						+e(href='http://www.woman.ru/beauty/').link Красота
+					+e('li').item
+						+e(href='http://www.woman.ru/relations/').link Любовь
+					+e('li').item
+						+e(href='http://www.woman.ru/psycho/').link Психология
+					+e('li').item
+						+e(href='http://www.woman.ru/health/diets/').link Диеты
+					+e('li').item
+						+e(href='http://www.woman.ru/health/').link Здоровье
+					+e('li').item
+						+e(href='http://www.woman.ru/kids/').link Дети
+					+e('li').item
+						+e(href='http://www.woman.ru/rest/').link Жизнь
+					+e('li').item
+						+e(href='http://www.woman.ru/home/').link Дом

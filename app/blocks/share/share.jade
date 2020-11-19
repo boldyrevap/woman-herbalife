@@ -1,0 +1,17 @@
+mixin share()
+
+	+b('section').share
+		+e('h3').title Нравится проект?
+		+e('ul').list
+			+e('li').item.wow.fadeInUp(data-wow-delay='0s')
+				+e(href='#').link
+					img(src='./images/ok.png')
+			+e('li').item.wow.fadeInUp(data-wow-delay='0.25s')
+				+e(href='#').link
+					img(src='./images/vk.png')
+			+e('li').item.wow.fadeInUp(data-wow-delay='0.5s')
+				+e(href='#').link
+					img(src='./images/fb.png')
+			+e('li').item.wow.fadeInUp(data-wow-delay='0.75s')
+				+e(href='#').link
+					img(src='./images/tw.png')

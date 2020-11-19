@@ -1,0 +1,25 @@
+.daily-ration
+	position relative
+	padding 25vw 0 8vw
+	margin-top -20vw
+	background url('../../images/daily-ration-bg-m.png') no-repeat 50% 0%
+	background-size cover
+	overflow hidden
+	+above(769px)
+		background url('../../images/daily-ration-bg.png') no-repeat 50% 0%
+		background-size cover
+		padding 19vw 0 3vw
+		margin-top -17vw
+
+
+	&__title
+		margin-bottom 50px
+
+	&__circles
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+		+below(420px)
+			flex-flow column
+			justify-content center

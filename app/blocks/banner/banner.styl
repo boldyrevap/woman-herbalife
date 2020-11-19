@@ -1,0 +1,64 @@
+.banner
+	background url('../../images/banner-bg-m.png') no-repeat bottom center
+	background-size cover
+	padding 64px 0 0
+	+above(769px)
+		background url('../../images/banner-bg.png') no-repeat bottom center
+		background-size cover
+		position relative
+		z-index 1
+		padding 178px 0 0
+
+	&__wrap
+		padding 35px 15px 120px
+
+	&__text
+		text-align left
+		font-family $ff-gothamregular
+		font-size 20px
+		color $c-black
+		margin-bottom 35px
+		+above(769px)
+			text-align justify
+			text-align-last center
+
+		+below(420px)
+			font-size 14px
+
+	&__title
+		margin-bottom 35px
+
+		img
+			width 100%
+
+	&__btns
+		text-align center
+
+	&__btn
+		display inline-block
+		width 80px
+		height 80px
+		border 2px solid $c-black
+		display flex
+		flex-flow column
+		justify-content center
+		align-items center
+		margin 0 auto
+		border-radius 50%
+		svg
+			width 18px
+			animation scroll 2s infinite
+		+below(420px)
+			width 40px
+			height 40px
+
+			svg
+				width 9px
+
+@keyframes scroll
+	0%
+		transform translateY(-5px)
+	50%
+		transform translateY(5px)
+	100%
+		transform translateY(-5px)

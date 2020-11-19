@@ -1,0 +1,100 @@
+.breakfasts-more
+	height 0
+	opacity 0
+	transition max-height .3s, opacity .3s
+
+	&.active
+		max-height 4000px
+		height auto
+		opacity 1
+
+	&__wrap
+		padding 40px 0
+
+	&__caption
+		text-align center
+		margin-bottom 20px
+		img
+			max-width 100%
+			max-height 100%
+
+	&__title
+		font-family $ff-gothamblack
+		font-size 23px
+		color $c-black
+		margin-bottom 35px
+		text-align center
+
+	&__name
+		font-family $ff-gothambold
+		font-size 16px
+		line-height 24px
+		color $c-green
+		text-transform uppercase
+
+	&__desc
+		font-family $ff-gothamregular
+		font-size 16px
+		line-height 24px
+
+	&__option
+		padding 10px
+		border 1px solid $c-green
+		flex-basis 32%
+		flex-shrink 0
+		text-align center
+		+below(560px)
+			flex-basis 100%
+			margin-bottom 20px
+
+		&_50
+			flex-basis 49%
+			+below(560px)
+				flex-basis 100%
+				margin-bottom 20px
+
+	&__img
+		height 135px
+		img
+			max-width 100%
+			max-height 100%
+
+	&__options
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items stretch
+		+below(560px)
+			flex-flow row wrap
+
+	&__item
+		margin-bottom 40px
+		&:last-child
+			margin-bottom 0
+
+	&__links
+		margin-top 40px
+		text-align center
+
+	&__link
+		display inline-block
+		color $c-black
+		font-family $ff-gothamregular
+		font-size 12px
+		text-decoration none
+		cursor pointer
+		p
+			margin-bottom 10px
+
+		&:hover
+			img
+				animation slideDown 1s infinite
+
+
+@keyframes slideDown
+	0%
+		transform translateY(0)
+	50%
+		transform translateY(-50%)
+	100%
+		transform translateY(0)

@@ -1,0 +1,141 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/title/title
+include /blocks/text/text
+include /blocks/circle/circle
+include /blocks/compare/compare
+include /blocks/graph/graph
+include /blocks/share/share
+
+include /blocks/header/header
+include /blocks/banner/banner
+include /blocks/eat-or-stop/eat-or-stop
+include /blocks/our-diet/our-diet
+include /blocks/out-of-time/out-of-time
+include /blocks/doctor/doctor
+include /blocks/breakfasts/breakfasts
+include /blocks/breakfasts-more/breakfasts-more
+include /blocks/common-truths/common-truths
+include /blocks/daily-ration/daily-ration
+include /blocks/gold-middle/gold-middle
+include /blocks/clever-food/clever-food
+include /blocks/expert-comment/expert-comment
+include /blocks/conclusion/conclusion
+include /blocks/interview/interview
+
+block head
+	- var pageTitle = 'Project Template';
+
+block content
+
+	+header()
+	+banner()
+	+eat-or-stop()
+	+our-diet()
+	+interview({
+		subtitle: 'Что вам мешает придерживаться здорового рациона питания?',
+		tip: {
+			value: '64',
+			text: 'не&nbsp;придерживаются здорового питания'
+		},
+		graphs: [
+			{
+				text: 'у&nbsp;меня нет сложностей с&nbsp;этим, следить<br/>за питанием вошло в&nbsp;привычку',
+				value: 27,
+				fill: 40,
+				mod: 'green'
+			}, {
+				text: 'вокруг столько вкусных соблазнов, что трудно удержаться',
+				value: 34,
+				fill: 50,
+				mod: 'red'
+			}, {
+				text: 'это занимает много времени (составление рациона, закупка<br/>продуктов и&nbsp;приготовление еды...)',
+				value: 17,
+				fill: 25,
+				mod: 'red'
+			}, {
+				text: 'здоровая еда стоит дорого',
+				value: 13,
+				fill: 19,
+				mod: 'red'
+			}, {
+				text: 'другое',
+				value: 9,
+				fill: 14,
+				mod: 'green'
+			}
+		]
+	})
+	+out-of-time()
+	+doctor()
+	+interview({
+		subtitle: 'Завтракаете&nbsp;ли вы&nbsp;дома?',
+		tip: {
+			value: '25',
+			text: 'не&nbsp;завтракают регулярно дома'
+		},
+		graphs: [
+			{
+				text: 'да, каждый день',
+				value: 75,
+				fill: 50,
+				mod: 'green'
+			}, {
+				text: 'нет, дома нет времени, завтракаю<br/>по дороге на&nbsp;работу или на&nbsp;работе',
+				value: 8,
+				fill: 6,
+				mod: 'red'
+			}, {
+				text: 'мой завтрак&nbsp;&mdash; это чашка кофе<br/>и не&nbsp;более того',
+				value: 11,
+				fill: 8,
+				mod: 'red'
+			}, {
+				text: 'полноценный завтрак дома<br/>устраиваю себе только в&nbsp;выходные',
+				value: 6,
+				fill: 4,
+				mod: 'red'
+			}
+		]
+	})
+	+breakfasts()
+	+breakfasts-more()
+	+common-truths()
+	+daily-ration()
+	+interview({
+		images: true,
+		info: 'Россияне традиционно потребляют мало белка, потому что наша продуктовая корзина в&nbsp;большей степени углеводная. Мы&nbsp;попросили наших респондентов выбрать из&nbsp;прилагаемого перечня продуктов, наиболее богатый белком, Как ни&nbsp;грустно, но&nbsp;правильный ответ дали только&nbsp;9% отпрошенных:',
+		graphs: [
+			{
+				text: '2 яйца',
+				value: 34,
+				fill: 50,
+				mod: 'green'
+			}, {
+				text: '100 гр. овсяной каши',
+				value: 27,
+				fill: 40,
+				mod: 'green'
+			}, {
+				text: '100 гр. говядины',
+				value: 17,
+				fill: 25,
+				mod: 'green'
+			}, {
+				text: '<strong>Порция протеинового коктейля<br/>(правильный ответ)</strong>',
+				value: 9,
+				fill: 16,
+				mod: 'white'
+			}, {
+				text: '100 гр. миндаля',
+				value: 5,
+				fill: 8,
+				mod: 'green'
+			}
+		]
+	})
+	+gold-middle()
+	+clever-food()
+	+expert-comment()
+	+conclusion()

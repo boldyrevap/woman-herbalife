@@ -1,0 +1,55 @@
+.circle
+	width 320px
+	height 320px
+	position relative
+	overflow hidden
+	+below(420px)
+		width 250px
+		height 250px
+
+	&__svg
+		transform rotate(61deg)
+		height 100%
+
+	&__title
+		font-family $ff-gothamblack
+		font-size 14px
+		text-transform uppercase
+		margin-bottom 5px
+
+	&__info
+		font-family $ff-gothamregular
+		font-size 14px
+
+	&__item
+		text-align center
+		display none
+		&.active
+			display block
+
+	&__list
+		position absolute
+		bottom 20%
+		left 50%
+		width 125px
+		transform translateX(-50%)
+
+		[data-circle='1'] &
+			bottom 30%
+
+	&__path
+		cursor pointer
+		transition opacity .3s
+		&:hover
+			opacity .7
+
+	&__image
+		position absolute
+		width 33%
+		top 43%
+		left 50%
+		transform translate(-50%, -50%)
+		img
+			width 100%
+
+

@@ -1,0 +1,8 @@
+mixin title(data)
+
+	if (data.subtitle)
+		+b('h2').title
+			+e('p').main!= data.main
+			+e('p').subtitle!= data.subtitle
+	else
+		+b('h2').title!= data.main

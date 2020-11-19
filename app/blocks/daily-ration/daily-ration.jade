@@ -1,0 +1,10 @@
+mixin daily-ration()
+
+	+b('section').daily-ration
+		.container.shadowless
+			+e.wrap
+				+e.title
+					+title({main: 'Суточный рацион питания'})
+				+e.circles
+					+circle(0)
+					+circle(1)

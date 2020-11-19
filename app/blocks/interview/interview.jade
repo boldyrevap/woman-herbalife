@@ -1,0 +1,33 @@
+mixin interview(data)
+	-data = data || {}
+
+	+b('section').interview.js-interview
+		.container.big
+			+e.wrap
+				+e('h3').title Мы спросили
+				if data.subtitle
+					+e('h4').subtitle!= data.subtitle
+				if data.info
+					+e('p').info
+						+text(data.info)
+				+e.content
+					+e('ul').list
+						for graph, i in data.graphs
+							+e('li').item
+								+e.value
+									if data.images
+										+e.image
+											img(src='./images/g-' + i + '.png')
+									if graph.mod === 'white'
+										span.white!= graph.text
+									else
+										span!= graph.text
+								+e.graph
+									+graph({value: graph.value, fill: graph.fill, mod: graph.mod})
+					if data.tip
+						+e.tip
+							+e('p').tip-content
+								+e('span').tip-big= data.tip.value
+								+e('span').tip-percent %
+								br
+								+e('span').tip-text!= data.tip.text

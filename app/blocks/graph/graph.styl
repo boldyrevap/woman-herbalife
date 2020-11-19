@@ -1,0 +1,76 @@
+.graph
+	padding 10px 40px
+	+above(769px)
+		padding 10px 30px 10px 10px
+	+below(420px)
+		padding 10px 10px
+
+	&__value
+		flex-basis 45px
+		flex-shrink 0
+		width 45px
+		height 45px
+		text-align center
+		background-color $c-white-graph
+		color $c-white
+		border-radius 50%
+		display flex
+		flex-flow row nowrap
+		justify-content center
+		align-items center
+		font-family $ff-gothambold
+		font-size 17px
+		margin-right 10px
+		+above(769px)
+			margin-left 10px
+			margin-right 0
+
+		span:last-child
+			font-size 11px
+			position relative
+			top 1px
+
+	&__item
+		width 5px
+		height 30px
+		background-color $c-white-graph
+		border-radius 5px
+		+below(420px)
+			width 2px
+
+	&__items
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+		width 100%
+
+	&__wrap
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+		+above(769px)
+			flex-flow row-reverse nowrap
+
+	&_green
+		.graph__item_fill
+			background-color $c-green
+		.graph__value
+			background-color $c-green
+
+	&_red
+		.graph__item_fill
+			background-color $c-orange
+		.graph__value
+			background-color $c-orange
+
+	&_white
+		background-color $c-orange
+		.graph__item
+			background-color #f79b74
+		.graph__item_fill
+			background-color $c-white
+		.graph__value
+			background-color $c-white
+			color $c-orange

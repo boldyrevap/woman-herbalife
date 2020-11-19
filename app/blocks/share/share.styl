@@ -1,0 +1,32 @@
+.share
+
+	&__list
+		display flex
+		flex-flow row nowrap
+		justify-content center
+		align-items center
+
+	&__item
+		margin 0 30px
+		+below(560px)
+			margin 0 10px
+
+	&__link
+		display inline-block
+		transition opacity .3s
+		img
+			max-width 100%
+		&:hover
+			opacity .7
+
+	&__title
+		font-family $ff-gothambold
+		font-size 18px
+		line-height 24px
+		color $c-black
+		text-align center
+		margin-bottom 25px
+		text-transform uppercase
+		+below(420px)
+			font-size 14px
+			line-height 20px

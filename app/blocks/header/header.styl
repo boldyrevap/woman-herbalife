@@ -1,0 +1,134 @@
+.header
+	// background-color black
+	position absolute
+	top 0
+	// height 178px
+	left 0
+	width 100%
+	z-index 5
+	font-family $ff-roboto
+
+	&__wrap
+		background-color $c-white
+		padding 0 10px
+		max-width 980px
+		margin 0 auto
+		position relative
+		box-shadow 0 0 20px 0 rgba(0, 0, 0, .3)
+		border-bottom #a1a1a1 1px solid
+		+above(769px)
+			padding 0 10px
+
+	&__nav
+		padding 20px 40px
+		+below(768px)
+			display none
+
+	&__list
+		display flex
+		flex-flow row nowrap
+		justify-content space-around
+		align-items center
+
+	&__link
+		font-size 14px
+		font-weight 700
+		text-transform uppercase
+		text-decoration none
+		color $c-black
+		transition color .3s
+		&:hover
+			color #be007f
+
+	&__top
+		position relative
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+		align-items center
+		color #a1a1a1
+		font-size 13px
+		padding 30px
+		+above(769px)
+			&:after
+				content ''
+				position absolute
+				right 0
+				bottom 0
+				left 0
+				height 2px
+				background url('../../images/header-bg.png') repeat-y center
+		+below(768px)
+			padding 10px 25px
+
+	&__placeholder
+		height 1px
+		width 100px
+		+below(768px)
+			width 25px
+
+	&__logo
+		width 100%
+		max-width 315px
+		+below(768px)
+			max-width 136px
+
+		&-link
+			display block
+
+		&-image
+			width 100%
+			+below(768px)
+				display none
+
+			&_m
+				display none
+				+below(768px)
+					display block
+
+	&__forum
+		width 100px
+		+below(768px)
+			display none
+
+		&-link
+			display block
+			background-color #be007f
+			color $c-white
+			font-size 17px
+			font-weight 500
+			text-decoration none
+			padding 13px 22px
+			border-radius 3px
+			transition background-color .3s
+			&:hover
+				background-color #906
+
+	&__burger
+		width 25px
+		height 14px
+		display none
+		+below(768px)
+			display block
+
+		&-link
+			display block
+			height 100%
+			position relative
+
+			&:before
+				content ''
+				position absolute
+				top 0
+				right 0
+				left 0
+				height 2px
+				border-radius 2px
+				background-color #be007f
+				box-shadow 0 6px 0 0 #be007f, 0 12px 0 0 #be007f
+				transition all .3s
+
+			&:hover
+				&:before
+					background-color #906
+					box-shadow 0 6px 0 0 #906, 0 12px 0 0 #906

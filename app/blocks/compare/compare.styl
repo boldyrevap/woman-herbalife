@@ -1,0 +1,31 @@
+.compare
+
+	&__title
+		font-family $ff-gothamblack
+		font-size 24px
+		color $c-green
+		margin-bottom 30px
+		text-align center
+
+	&__images
+		text-align center
+		+above(769px)
+			margin 0 -85px 20px
+			display flex
+			flex-flow row nowrap
+			justify-content space-between
+			align-items center
+		img
+			margin-bottom 50px
+			max-width 100%
+			+above(769px)
+				margin 0
+				margin-right 10px
+				width 48%
+				&:last-child
+					margin-right 0
+
+	&__text
+		font-family $ff-gothamregular
+		font-size 10px
+		color $c-grey

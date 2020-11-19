@@ -1,0 +1,46 @@
+import('sprites/*')
+import('helpers/svg-size')
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+
+import('../blocks/**/*')
+
+.container
+	padding 0 25px
+	max-width 980px
+	margin 0 auto
+	position relative
+	+below(420px)
+		padding 0
+	+above(769px)
+		padding 0 70px
+	+above(1040px)
+		&:before,
+		&:after
+			content ''
+			position absolute
+			top 0
+			width 20px
+			height 100%
+
+		&:before
+			right 100%
+			box-shadow inset -20px 0 20px -20px rgba(0, 0, 0, .3)
+
+		&:after
+			left 100%
+			box-shadow inset 20px 0 20px -20px rgba(0, 0, 0, .3)
+
+		&.shadowless
+			&:before,
+			&:after
+				content none
+
+		&.big
+			padding 0 30px
+
+body
+	position relative
+	color $c-black

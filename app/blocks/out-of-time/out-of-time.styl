@@ -1,0 +1,70 @@
+.out-of-time
+
+	&__wrap
+		padding 60px 15px 0
+
+	&__title
+		margin-bottom 25px
+
+	&__text
+		margin-bottom 25px
+
+	&__top
+		padding 30px 0
+		background url('../../images/out-of-time-bg-m.jpg') no-repeat center
+		background-size cover
+		+above(769px)
+			background url('../../images/out-of-time-bg.jpg') no-repeat center
+			background-size auto
+
+		&-wrap
+			padding 30px 40px 15px
+			background rgba(255, 255, 255, .6)
+			+above(769px)
+				padding 60px 60px 20px
+			+below(420px)
+				padding 30px 10px 15px
+
+	&__image
+		margin 0 0 30px
+		text-align center
+
+		img
+			max-width 100%
+
+	&__woman
+		text-align center
+		img
+			max-width 100%
+
+	&__bottom
+		position relative
+		padding 330px 0 20px
+		margin -310px 0 0
+		background url('../../images/out-of-time-bg-bottom-m.png') no-repeat 50% 0
+		background-size cover
+		+below(420px)
+			padding 300px 15px 20px
+			margin -300px 0 0
+		+above(769px)
+			margin -300px 0 0
+			padding 340px 0 20px
+			background url('../../images/out-of-time-bg-bottom.png') no-repeat 50% 0%
+			background-size auto
+
+	&__divider
+		padding 25px 0
+
+	&__icons
+		display flex
+		flex-flow row nowrap
+		justify-content center
+		align-items center
+		margin-bottom 25px
+
+	&__icon
+		margin 0 30px
+		+below(560px)
+			margin 0 10px
+		img
+			max-width 100%

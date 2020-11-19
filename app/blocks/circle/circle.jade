@@ -1,0 +1,69 @@
+mixin circle(id)
+
+	+b.circle(data-circle=id)
+		if id
+			+e.svg
+				svg(data-name='Слой 1', xmlns='http://www.w3.org/2000/svg', viewbox='0 0 360.59 360.54')
+					defs
+						clippath#a
+							path(fill='none', d='M0 0h360.59v360.54H0z')
+					g(clip-path='url(#a)')
+						path(class='circle__path js-circle-path' d='M180.37 180.27L5.5 223.87C-16.72 134.73 30 44.94 115.79 12z', fill='#ffa400')
+						path(class='circle__path js-circle-path' d='M180.37 180.27L115.79 12a180.21 180.21 0 0 1 232.83 103.68 173.87 173.87 0 0 1 12 64.59z', fill='#9d1d96')
+						path(class='circle__path js-circle-path' d='M180.37 180.27h180.22c0 91.87-67.07 167.68-158.26 178.88z', fill='#f15d2f')
+						path(class='circle__path js-circle-path' d='M180.37 180.27l22 178.88C111.15 370.34 27.73 313 5.5 223.87z', fill='#76bc21')
+						path(d='M180.3 61a119.31 119.31 0 1 0 119.3 119.27A119.31 119.31 0 0 0 180.3 61', fill='#fff')
+			+e.image
+				img(src='./images/c1-0.png')
+			+e('ul').list
+				+e('li').item.active
+					+e('p').title(style="color: #ffa400;") Белки
+					+e('p').info 30%
+				+e('li').item
+					+e('p').title(style="color: #9d1d96;") Жиры
+					+e('p').info 30%
+				+e('li').item
+					+e('p').title(style="color: #f15d2f;") Углеводы
+					+e('p').info 40%
+				+e('li').item
+					+e('p').title(style="color: #76bc21;") Клетчатка
+					+e('p').info 30 гр.
+		else
+			+e.svg
+				svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 361.5 360.54')
+					defs
+						style.
+							.cls-10{fill:none}.cls-9{fill:#fff}.cls-10{stroke:#333;stroke-linecap:round;stroke-width:2.74px}
+						clippath#clip-path
+							path(fill='none', d='M0 0h361.5v360.54H0z')
+					g(clip-path='url(#clip-path)')
+						path(class='circle__path js-circle-path' d='M180.56 180.28l109.74 143C211.32 383.88 98.16 369 37.56 290a171.49 171.49 0 0 1-26.91-49.56z', fill='#76bc21')
+						path(class='circle__path js-circle-path' d='M180.56 180.28L10.65 240.45C0 210.42-2.42 185.14 2.29 153.63z', fill='#f15d2f')
+						path(class='circle__path js-circle-path' d='M180.56 180.28L2.29 153.63A180.27 180.27 0 0 1 207.21 2 171.64 171.64 0 0 1 261 19z', fill='#9d1d96')
+						path(class='circle__path js-circle-path' d='M180.56 180.28L261 19a177.13 177.13 0 0 1 62.58 51.59z', fill='#ffa400')
+						path(class='circle__path js-circle-path' d='M180.56 180.28l143-109.73c48.48 63.18 50.65 146.19 5.55 211.82z', fill='#808184')
+						path(class='circle__path js-circle-path' d='M180.56 180.28l148.56 102.09a171.5 171.5 0 0 1-38.82 40.91z', fill='#ffd520')
+						path.cls-9(d='M181.07 309.12A129.1 129.1 0 1 0 52 180a129.09 129.09 0 0 0 129.1 129.09')
+						path.cls-9(d='M180.75 319.87A139.47 139.47 0 1 0 41.28 180.4a139.47 139.47 0 0 0 139.47 139.47')
+					path.cls-10(d='M180.75 42.3v11.91M180.75 306.58v11.92M42.65 180.4h11.91M306.93 180.4h11.92M111.7 60.8l5.96 10.32M243.84 289.68L249.8 300M61.15 249.45l10.32-5.96M290.03 117.3l10.32-5.95M61.15 111.35l10.32 5.95M290.03 243.49l10.32 5.96M111.7 300l5.96-10.32M243.84 71.12l5.96-10.32')
+			+e.image
+				img(src='./images/c0-0.png')
+			+e('ul').list
+				+e('li').item.active
+					+e('p').title(style="color: #76bc21;") Завтрак
+					+e('p').info 30% калорий
+				+e('li').item
+					+e('p').title(style="color: #f15d2f;") Утренний перекус
+					+e('p').info 8% калорий
+				+e('li').item
+					+e('p').title(style="color: #9d1d96;") Обед
+					+e('p').info 30% калорий
+				+e('li').item
+					+e('p').title(style="color: #ffa400;") Дневной перекус
+					+e('p').info 7% калорий
+				+e('li').item
+					+e('p').title(style="color: #808184;") Ужин
+					+e('p').info 20% калорий
+				+e('li').item
+					+e('p').title(style="color: #ffd520;") Вечерний перекус
+					+e('p').info 7% калорий

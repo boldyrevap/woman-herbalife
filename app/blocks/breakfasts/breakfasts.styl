@@ -1,0 +1,79 @@
+.breakfasts
+	background url('../../images/breakfasts-bg-m.jpg') no-repeat center
+	background-size cover
+	overflow hidden
+	+above(769px)
+		background url('../../images/breakfasts-bg.jpg') no-repeat center
+		background-size cover
+
+	&__title
+		font-family $ff-gothamblack
+		font-size 29px
+		color $c-white
+		text-transform uppercase
+		padding-bottom 40px
+		position relative
+		margin-bottom 25px
+
+		&:after
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+			transform translateX(-50%)
+			width 85px
+			height 10px
+			background-color $c-white
+			border-radius 10px
+
+	&__content
+		background rgba(145, 202, 75, .9)
+		width 425px
+		flex-basis 425px
+		margin-right -25px
+		padding 40px
+		+below(420px)
+			flex-basis 100%
+			margin 0
+		+above(769px)
+			margin-right -70px
+
+		&-wrap
+			padding 50px 20px 10px
+			border 1px solid $c-white
+			text-align center
+
+	&__wrap
+		display flex
+		flex-flow row nowrap
+		justify-content flex-end
+		align-items stretch
+
+	&__caption
+		font-family $ff-gothamblack
+		font-size 23px
+		color $c-white
+		margin-bottom 45px
+
+	&__link
+		display inline-block
+		color $c-white
+		font-family $ff-gothamregular
+		font-size 12px
+		text-decoration none
+		cursor pointer
+		p
+			margin-bottom 10px
+
+		&:hover
+			img
+				animation slideDown 1s infinite
+
+
+@keyframes slideDown
+	0%
+		transform translateY(0)
+	50%
+		transform translateY(-50%)
+	100%
+		transform translateY(0)
